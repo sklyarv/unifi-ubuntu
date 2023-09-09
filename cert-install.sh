@@ -17,5 +17,5 @@ certbot certonly --agree-tos --no-eff-email --standalone --preferred-challenges 
   cp cert-renew.sh /etc/letsencrypt/renewal-hooks/post/
   echo "DOMAIN=${DOMAIN}" > /etc/letsencrypt/renewal-hooks/post/.env
   echo "renew_hook = /etc/letsencrypt/renewal-hooks/post/cert-renew.sh" >> /etc/letsencrypt/renewal/${DOMAIN}.conf
-  ./cert-renew.sh
+  bash cert-renew.sh
 }
